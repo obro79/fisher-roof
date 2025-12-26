@@ -31,7 +31,7 @@ const services = [
   },
   {
     title: "Inspections",
-    description: "Comprehensive roof inspections to catch problems early and extend your roof&apos;s lifespan.",
+    description: "Comprehensive roof inspections to catch problems early and extend your roof's lifespan.",
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
@@ -207,7 +207,11 @@ export default function Home() {
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 1].map((num, index) => (
+            {[
+              { image: "project-1.jpg", title: "Storm Damage Repair", description: "Emergency repair after severe weather" },
+              { image: "project-2.jpg", title: "New Shingle Installation", description: "Complete residential re-roofing" },
+              { image: "project-1.jpg", title: "Commercial Flat Roof", description: "Commercial building renovation" }
+            ].map((project, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -218,15 +222,15 @@ export default function Home() {
                 className="relative group overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer"
               >
                 <Image
-                  src={`/images/project-${num}.jpg`}
-                  alt={`Project ${index + 1}`}
+                  src={`/images/${project.image}`}
+                  alt={project.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-white font-semibold text-lg">Residential Roofing</h3>
-                  <p className="text-gray-300 text-sm">Complete roof installation</p>
+                  <h3 className="text-white font-semibold text-lg">{project.title}</h3>
+                  <p className="text-gray-300 text-sm">{project.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -295,7 +299,7 @@ export default function Home() {
             <p className="text-white/80 max-w-2xl mx-auto text-lg mb-8">
               Contact us today for a free, no-obligation quote. We&apos;ll assess your needs and provide a detailed estimate.
             </p>
-            <Button href="/contact" variant="secondary" size="lg" className="bg-white text-[#0D9488] hover:bg-gray-100">
+            <Button href="/contact" size="lg" className="!bg-white !text-[#0D9488] hover:!bg-gray-100">
               Get Your Free Quote
             </Button>
           </motion.div>
