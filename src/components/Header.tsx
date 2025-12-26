@@ -39,7 +39,7 @@ export default function Header() {
       }`}
     >
       <Container>
-        <nav className="flex items-center justify-between h-24">
+        <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="relative z-10">
             <Image
@@ -53,7 +53,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-10">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -120,7 +120,7 @@ export default function Header() {
             className="md:hidden bg-white border-t"
           >
             <Container>
-              <div className="py-8 flex flex-col gap-5">
+              <div className="py-6 flex flex-col gap-4">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}

@@ -27,15 +27,15 @@ export default function ServiceCard({
     >
       <Link href={href}>
         <motion.div
-          whileHover={{ y: -8, boxShadow: "0 25px 50px rgba(13, 148, 136, 0.12)" }}
-          className="bg-white p-10 rounded-2xl shadow-lg border border-gray-100 cursor-pointer transition-all duration-300 h-full"
+          whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(13, 148, 136, 0.15)" }}
+          className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 cursor-pointer transition-all duration-300 h-full"
         >
-          <div className="w-16 h-16 bg-[#0D9488]/10 rounded-xl flex items-center justify-center text-[#0D9488] mb-8">
+          <div className="w-14 h-14 bg-[#0D9488]/10 rounded-xl flex items-center justify-center text-[#0D9488] mb-6">
             {icon}
           </div>
-          <h3 className="text-xl font-bold text-[#0F172A] mb-4">{title}</h3>
+          <h3 className="text-xl font-bold text-[#0F172A] mb-3">{title}</h3>
           <p className="text-[#64748B] leading-relaxed">{description}</p>
-          <div className="mt-6 text-[#0D9488] font-medium flex items-center gap-2 group">
+          <div className="mt-4 text-[#0D9488] font-medium flex items-center gap-2 group">
             Learn more
             <svg
               className="w-4 h-4 transition-transform group-hover:translate-x-1"

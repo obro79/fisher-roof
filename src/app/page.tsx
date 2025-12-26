@@ -95,13 +95,13 @@ export default function Home() {
         </div>
 
         {/* Content */}
-        <Container className="relative z-10 pt-24 lg:pt-32">
+        <Container className="relative z-10 pt-20">
           <div className="max-w-3xl">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
             >
               Protect Your Home with
               <span className="text-[#14B8A6]"> Expert Roofing</span>
@@ -110,7 +110,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-xl text-gray-300 mb-10 leading-relaxed"
+              className="text-xl text-gray-300 mb-8 leading-relaxed"
             >
               Professional roofing services you can trust. From repairs to complete installations, we deliver quality craftsmanship that stands the test of time.
             </motion.p>
@@ -148,18 +148,18 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-28 lg:py-32 bg-[#F8FAFC]">
+      <section className="py-24 bg-[#F8FAFC]">
         <Container>
-          <AnimatedSection className="text-center mb-20">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0F172A] mb-5">
+          <AnimatedSection className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4">
               Our Services
             </h2>
-            <p className="text-[#64748B] max-w-2xl mx-auto text-lg lg:text-xl">
+            <p className="text-[#64748B] max-w-2xl mx-auto text-lg">
               Comprehensive roofing solutions tailored to protect and enhance your property
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <ServiceCard
                 key={service.title}
@@ -172,9 +172,9 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 lg:py-24 bg-[#0F172A]">
+      <section className="py-20 bg-[#0F172A]">
         <Container>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -184,10 +184,10 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#0D9488] mb-3">
+                <div className="text-4xl md:text-5xl font-bold text-[#0D9488] mb-2">
                   {stat.value}
                 </div>
-                <div className="text-[#94A3B8] text-sm lg:text-base tracking-wide uppercase">{stat.label}</div>
+                <div className="text-[#94A3B8]">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -195,18 +195,18 @@ export default function Home() {
       </section>
 
       {/* Portfolio Preview Section */}
-      <section className="py-28 lg:py-32">
+      <section className="py-24">
         <Container>
-          <AnimatedSection className="text-center mb-20">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0F172A] mb-5">
+          <AnimatedSection className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4">
               Our Recent Work
             </h2>
-            <p className="text-[#64748B] max-w-2xl mx-auto text-lg lg:text-xl">
+            <p className="text-[#64748B] max-w-2xl mx-auto text-lg">
               See the quality and craftsmanship we bring to every project
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[1, 2, 1].map((num, index) => (
               <motion.div
                 key={index}
@@ -232,7 +232,7 @@ export default function Home() {
             ))}
           </div>
 
-          <AnimatedSection className="text-center mt-16">
+          <AnimatedSection className="text-center mt-12">
             <Button href="/portfolio" variant="secondary">
               View All Projects
             </Button>
@@ -241,18 +241,18 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-28 lg:py-32 bg-[#F8FAFC]">
+      <section className="py-24 bg-[#F1F5F9]">
         <Container>
-          <AnimatedSection className="text-center mb-20">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0F172A] mb-5">
+          <AnimatedSection className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0F172A] mb-4">
               What Our Clients Say
             </h2>
-            <p className="text-[#64748B] max-w-2xl mx-auto text-lg lg:text-xl">
+            <p className="text-[#64748B] max-w-2xl mx-auto text-lg">
               Don&apos;t just take our word for it - hear from our satisfied customers
             </p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
+          <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -260,16 +260,16 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-10 rounded-2xl shadow-lg"
+                className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100"
               >
-                <div className="flex gap-1 mb-6">
+                <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                     </svg>
                   ))}
                 </div>
-                <p className="text-[#64748B] mb-8 leading-relaxed text-lg">&ldquo;{testimonial.quote}&rdquo;</p>
+                <p className="text-[#64748B] mb-6 leading-relaxed">&ldquo;{testimonial.quote}&rdquo;</p>
                 <div>
                   <div className="font-semibold text-[#0F172A]">{testimonial.author}</div>
                   <div className="text-sm text-[#94A3B8]">{testimonial.role}</div>
@@ -281,7 +281,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 lg:py-24 bg-[#0D9488]">
+      <section className="py-24 bg-[#0D9488]">
         <Container>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -289,10 +289,10 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
-            <p className="text-white/80 max-w-2xl mx-auto text-lg lg:text-xl mb-10">
+            <p className="text-white/80 max-w-2xl mx-auto text-lg mb-8">
               Contact us today for a free, no-obligation quote. We&apos;ll assess your needs and provide a detailed estimate.
             </p>
             <Button href="/contact" variant="secondary" size="lg" className="bg-white text-[#0D9488] hover:bg-gray-100">

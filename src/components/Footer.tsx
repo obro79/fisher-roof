@@ -20,7 +20,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0F172A] text-white">
       <Container>
-        <div className="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Image
@@ -37,8 +37,8 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-lg mb-6">Services</h3>
-            <ul className="space-y-4">
+            <h3 className="font-semibold text-lg mb-4">Services</h3>
+            <ul className="space-y-3">
               {footerLinks.services.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -54,8 +54,8 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold text-lg mb-6">Company</h3>
-            <ul className="space-y-4">
+            <h3 className="font-semibold text-lg mb-4">Company</h3>
+            <ul className="space-y-3">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
                   <Link
@@ -71,8 +71,8 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-lg mb-6">Contact Us</h3>
-            <ul className="space-y-4 text-[#94A3B8]">
+            <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
+            <ul className="space-y-3 text-[#94A3B8]">
               <li className="flex items-center gap-2">
                 <svg className="w-5 h-5 text-[#0D9488]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -101,7 +101,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-[#1E293B] py-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="border-t border-[#1E293B] py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[#64748B] text-sm">
             &copy; {new Date().getFullYear()} Fisher&apos;s Exteriors. All rights reserved.
           </p>
