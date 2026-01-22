@@ -1,64 +1,46 @@
 @import "tailwindcss";
 
-:root {
-  --teal-primary: #0D9488;
-  --teal-dark: #0F766E;
-  --teal-light: #14B8A6;
-  --black-primary: #0F172A;
-  --black-soft: #1E293B;
-  --gray-accent: #64748B;
-  --gray-light: #94A3B8;
-  --white: #FFFFFF;
-  --off-white: #F8FAFC;
+@theme {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-outfit), system-ui, sans-serif;
+
+  /* Custom Colors Extension - "Refined/Mineral" Palette */
+  /* Replaces electric teal with a calmer Sage/Mineral tone */
+  --color-teal-400: #94B8B8;
+  /* Muted Mineral */
+  --color-teal-500: #5F9EA0;
+  /* Deep Cadet Blue */
+  --color-amber-400: #E2E8F0;
+  /* Replaced Amber with Slate-200 for subtle highlights (silver) */
+  --color-slate-950: #0F172A;
+  /* Slate-900 (slightly lighter than pure black-blue for softer contrast) */
 }
 
-@theme inline {
-  --color-teal: var(--teal-primary);
-  --color-teal-dark: var(--teal-dark);
-  --color-teal-light: var(--teal-light);
-  --color-dark: var(--black-primary);
-  --color-dark-soft: var(--black-soft);
-  --color-gray: var(--gray-accent);
-  --color-gray-light: var(--gray-light);
-  --font-sans: "Inter", system-ui, sans-serif;
+/* Global Base Styles */
+body {
+  background-color: var(--color-slate-950);
+  color: #F8FAFC;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  background: var(--white);
-  color: var(--black-primary);
-  font-family: "Inter", system-ui, sans-serif;
-  line-height: 1.7;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-
-/* Custom scrollbar */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--off-white);
+  background: #0F172A;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--gray-accent);
+  background: #475569;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--teal-primary);
+  background: #94B8B8;
 }

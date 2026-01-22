@@ -1,18 +1,25 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+// import Footer from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Fisher's Exteriors | Professional Roofing Services",
-  description: "Quality roofing services you can trust. Expert repairs, installations, and inspections. Get your free quote today!",
-  keywords: "roofing, roof repair, roof installation, roof inspection, Fisher's Exteriors",
+  title: "Fisher's Exteriors | Premium Roofing Services",
+  description: "Experience the pinnacle of roofing craftsmanship. We deliver elite protection and modern aesthetics for your home.",
+  keywords: "roofing, premium roofing, roof repair, modern roofing, Fisher's Exteriors",
 };
 
 export default function RootLayout({
@@ -21,11 +28,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+    <html lang="en" className="dark scroll-smooth">
+      <body className={`${inter.variable} ${outfit.variable} font-sans bg-slate-950 text-slate-50 antialiased selection:bg-teal-500/30`}>
+        <Navbar />
+        {children}
+        {/* <Footer /> */}
       </body>
     </html>
   );
